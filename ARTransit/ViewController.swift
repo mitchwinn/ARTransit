@@ -16,6 +16,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        // Setup location manager.
         self.locationManager = CLLocationManager()
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -40,12 +41,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
             mapView.setRegion(region, animated: true)
 
-            // more stuff here
+            // Call the model for stop data.
             TrimetAPI.sharedInstance.getStops(lastLocation!, radius: 300, completionBlock: {
                 (let stops) in
                 print("\(stops)")
             })
 
+            // Create a new annotation.
+
+            // Add the annotation to the map.
 
             manager.stopUpdatingLocation()
         }

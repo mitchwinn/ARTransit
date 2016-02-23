@@ -10,19 +10,20 @@ import Foundation
 import MapKit
 import Alamofire
 
-class TrimetAPI {
+struct TrimetAPI {
     // MARK: - Instance Variables
     static let sharedInstance = TrimetAPI()
     private init() {}
     let appID = ""
-    let apiURL = "https://developer.trimet.org/ws/v1/"
+    let apiURLV1 = "https://developer.trimet.org/ws/v1/"
+    let apiURLV2 = "https://developer.trimet.org/ws/v2/"
 
     // Call the trimet api to get stops around a certain location and radius.
     func getStops(location: CLLocation, radius: Int, completionBlock:(([Stop])->())?) {
-        let latlong = "\(location.coordinate.latitude),\(location.coordinate.longitude)".stringByRemovingPercentEncoding!
+        let latlong = "\(location.coordinate.latitude),\(location.coordinate.longitude)"
         var stops = [Stop]()
 
-        Alamofire.request(.GET, apiURL + "stops",
+        Alamofire.request(.GET, apiURLV1 + "stops",
                           parameters: ["appID": appID,
                                        "ll": latlong,
                                        "meters": radius,
