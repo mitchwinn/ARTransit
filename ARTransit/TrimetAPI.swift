@@ -14,7 +14,7 @@ class TrimetAPI {
     // MARK: - Instance Variables
     static let sharedInstance = TrimetAPI()
     private init() {}
-    let appID = "D96D0407AC5A003B1CD75521D"
+    let appID = ""
     let apiURL = "https://developer.trimet.org/ws/v1/"
 
     // Call the trimet api to get stops around a certain location and radius.
