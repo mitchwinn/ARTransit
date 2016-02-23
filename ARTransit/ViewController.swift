@@ -45,11 +45,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             TrimetAPI.sharedInstance.getStops(lastLocation!, radius: 300, completionBlock: {
                 (let stops) in
                 print("\(stops)")
+
+                for stop in stops {
+                    // Create a new annotation.
+                    let stopAnnotation = StopAnnotation(stop: stop)
+
+                    // Add the annotation to the map.
+                    self.mapView.addAnnotation(stopAnnotation)
+                }
             })
-
-            // Create a new annotation.
-
-            // Add the annotation to the map.
 
             manager.stopUpdatingLocation()
         }

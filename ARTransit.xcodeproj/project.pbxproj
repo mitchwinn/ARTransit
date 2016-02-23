@@ -15,6 +15,7 @@
 		7B040DA71C7A2F1000EF130F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B040DA51C7A2F1000EF130F /* LaunchScreen.storyboard */; };
 		7B040DAF1C7A2F3300EF130F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B040DAE1C7A2F3300EF130F /* MapKit.framework */; };
 		7B040DB11C7A7C5E00EF130F /* TrimetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B040DB01C7A7C5E00EF130F /* TrimetAPI.swift */; };
+		7B3DC3011C7C322300C18AAD /* StopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3001C7C322300C18AAD /* StopAnnotation.swift */; };
 		7BCE09DD1C7AD93C0095C053 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE09DC1C7AD93C0095C053 /* Stop.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		7B040DA81C7A2F1000EF130F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B040DAE1C7A2F3300EF130F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7B040DB01C7A7C5E00EF130F /* TrimetAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrimetAPI.swift; sourceTree = "<group>"; };
+		7B3DC3001C7C322300C18AAD /* StopAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopAnnotation.swift; sourceTree = "<group>"; };
 		7BCE09DC1C7AD93C0095C053 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		DEBFECBE5168D5535EBA00D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				7B040DA51C7A2F1000EF130F /* LaunchScreen.storyboard */,
 				7B040DA81C7A2F1000EF130F /* Info.plist */,
 				7BCE09DC1C7AD93C0095C053 /* Stop.swift */,
+				7B3DC3001C7C322300C18AAD /* StopAnnotation.swift */,
 			);
 			path = ARTransit;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				7B040D9F1C7A2F1000EF130F /* ViewController.swift in Sources */,
 				7B040D9D1C7A2F1000EF130F /* AppDelegate.swift in Sources */,
 				7BCE09DD1C7AD93C0095C053 /* Stop.swift in Sources */,
+				7B3DC3011C7C322300C18AAD /* StopAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
