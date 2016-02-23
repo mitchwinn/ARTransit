@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "TrimetAPI.(getStops(TrimetAPI) -&gt; (CLLocation, radius : Int, completionBlock : (Bool) -&gt; ()?) -&gt; ()).(closure #1):TrimetAPI.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "JSON[&quot;resultSet&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
