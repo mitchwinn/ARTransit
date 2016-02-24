@@ -10,6 +10,35 @@ import UIKit
 import CoreLocation
 
 class AugmentedViewController: UIViewController, ARDataSource {
+    var stops = [Stop]()
+    var annotatedStops = [ARStopAnnotation]()
+    
+    override func viewDidLoad() {
+        // Check if device has hardware needed for augmented reality.
+        let result = ARViewController.createCaptureSession()
+        if result.error != nil
+        {
+            let message = result.error?.userInfo["description"] as? String
+            
+            //UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: "Close")
+            let alertView = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(alertView, animated: true, completion: nil)
+            return
+        }
+        
+        // Create annotations.
+        for stop in self.stops {
+            annotatedStops.append(ARStopAnnotation(stop: stop))
+        }
+        
+        // Create ARViewController with annotations.
+        let arViewController = ARViewController()
+        arViewController.debugEnabled = true
+        arViewController.dataSource = self
+        arViewController.setAnnotations(annotatedStops)
+        self.presentViewController(arViewController, animated: true, completion: nil)
+    }
+    
     /// This method is called by ARViewController, make sure to set dataSource property.
     func ar(arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView
     {
