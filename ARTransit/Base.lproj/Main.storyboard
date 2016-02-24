@@ -21,10 +21,14 @@
                                 <rect key="frame" x="20" y="20" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Augmented"/>
+                                <connections>
+                                    <segue destination="M3p-9L-mGF" kind="push" id="E7d-zE-b39"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="och-lj-14x"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mapView" destination="WVV-Bj-zRt" id="Zot-MC-h7m"/>
@@ -33,6 +37,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="148.5" y="296.5"/>
+        </scene>
+        <!--Augmented View Controller-->
+        <scene sceneID="ZIq-J4-g5H">
+            <objects>
+                <viewController id="M3p-9L-mGF" customClass="AugmentedViewController" customModule="ARTransit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WDe-KD-M5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="64p-bC-VEC">
+                                <rect key="frame" x="28" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Map"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="kPA-8P-Ep2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IZE-s9-95Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTM-CB-Qzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664.5" y="296.5"/>
         </scene>
     </scenes>
 </document>

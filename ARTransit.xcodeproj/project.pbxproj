@@ -22,6 +22,9 @@
 		7B3DC31E1C7D7C1300C18AAD /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3191C7D7C1300C18AAD /* ARTrackingManager.swift */; };
 		7B3DC31F1C7D7C1300C18AAD /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC31A1C7D7C1300C18AAD /* ARViewController.swift */; };
 		7B3DC3221C7D7C6100C18AAD /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3211C7D7C6100C18AAD /* DebugMapViewController.swift */; };
+		7B3DC3241C7D8C2400C18AAD /* ARStopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3231C7D8C2400C18AAD /* ARStopAnnotation.swift */; };
+		7B3DC3281C7E019700C18AAD /* AugmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3271C7E019700C18AAD /* AugmentedViewController.swift */; };
+		7B3DC32A1C7E02ED00C18AAD /* ARStopAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3291C7E02ED00C18AAD /* ARStopAnnotationView.swift */; };
 		7BCE09DD1C7AD93C0095C053 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE09DC1C7AD93C0095C053 /* Stop.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,9 @@
 		7B3DC3191C7D7C1300C18AAD /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
 		7B3DC31A1C7D7C1300C18AAD /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		7B3DC3211C7D7C6100C18AAD /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		7B3DC3231C7D8C2400C18AAD /* ARStopAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARStopAnnotation.swift; sourceTree = "<group>"; };
+		7B3DC3271C7E019700C18AAD /* AugmentedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AugmentedViewController.swift; sourceTree = "<group>"; };
+		7B3DC3291C7E02ED00C18AAD /* ARStopAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARStopAnnotationView.swift; sourceTree = "<group>"; };
 		7BCE09DC1C7AD93C0095C053 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		DEBFECBE5168D5535EBA00D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,12 +110,15 @@
 				7B040D9C1C7A2F1000EF130F /* AppDelegate.swift */,
 				7B040D9E1C7A2F1000EF130F /* ViewController.swift */,
 				7B040DB01C7A7C5E00EF130F /* TrimetAPI.swift */,
+				7BCE09DC1C7AD93C0095C053 /* Stop.swift */,
+				7B3DC3001C7C322300C18AAD /* StopAnnotation.swift */,
+				7B3DC3231C7D8C2400C18AAD /* ARStopAnnotation.swift */,
+				7B3DC3271C7E019700C18AAD /* AugmentedViewController.swift */,
+				7B3DC3291C7E02ED00C18AAD /* ARStopAnnotationView.swift */,
 				7B040DA01C7A2F1000EF130F /* Main.storyboard */,
 				7B040DA31C7A2F1000EF130F /* Assets.xcassets */,
 				7B040DA51C7A2F1000EF130F /* LaunchScreen.storyboard */,
 				7B040DA81C7A2F1000EF130F /* Info.plist */,
-				7BCE09DC1C7AD93C0095C053 /* Stop.swift */,
-				7B3DC3001C7C322300C18AAD /* StopAnnotation.swift */,
 			);
 			path = ARTransit;
 			sourceTree = "<group>";
@@ -264,15 +273,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3DC3221C7D7C6100C18AAD /* DebugMapViewController.swift in Sources */,
+				7B3DC3241C7D8C2400C18AAD /* ARStopAnnotation.swift in Sources */,
 				7B040DB11C7A7C5E00EF130F /* TrimetAPI.swift in Sources */,
 				7B3DC31B1C7D7C1300C18AAD /* ARAnnotation.swift in Sources */,
 				7B040D9F1C7A2F1000EF130F /* ViewController.swift in Sources */,
 				7B3DC31E1C7D7C1300C18AAD /* ARTrackingManager.swift in Sources */,
+				7B3DC32A1C7E02ED00C18AAD /* ARStopAnnotationView.swift in Sources */,
 				7B3DC31D1C7D7C1300C18AAD /* ARConfiguration.swift in Sources */,
 				7B040D9D1C7A2F1000EF130F /* AppDelegate.swift in Sources */,
 				7BCE09DD1C7AD93C0095C053 /* Stop.swift in Sources */,
 				7B3DC3011C7C322300C18AAD /* StopAnnotation.swift in Sources */,
 				7B3DC31C1C7D7C1300C18AAD /* ARAnnotationView.swift in Sources */,
+				7B3DC3281C7E019700C18AAD /* AugmentedViewController.swift in Sources */,
 				7B3DC31F1C7D7C1300C18AAD /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
