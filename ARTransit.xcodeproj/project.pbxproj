@@ -16,6 +16,12 @@
 		7B040DAF1C7A2F3300EF130F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B040DAE1C7A2F3300EF130F /* MapKit.framework */; };
 		7B040DB11C7A7C5E00EF130F /* TrimetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B040DB01C7A7C5E00EF130F /* TrimetAPI.swift */; };
 		7B3DC3011C7C322300C18AAD /* StopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3001C7C322300C18AAD /* StopAnnotation.swift */; };
+		7B3DC31B1C7D7C1300C18AAD /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3161C7D7C1300C18AAD /* ARAnnotation.swift */; };
+		7B3DC31C1C7D7C1300C18AAD /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3171C7D7C1300C18AAD /* ARAnnotationView.swift */; };
+		7B3DC31D1C7D7C1300C18AAD /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3181C7D7C1300C18AAD /* ARConfiguration.swift */; };
+		7B3DC31E1C7D7C1300C18AAD /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3191C7D7C1300C18AAD /* ARTrackingManager.swift */; };
+		7B3DC31F1C7D7C1300C18AAD /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC31A1C7D7C1300C18AAD /* ARViewController.swift */; };
+		7B3DC3221C7D7C6100C18AAD /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3211C7D7C6100C18AAD /* DebugMapViewController.swift */; };
 		7BCE09DD1C7AD93C0095C053 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE09DC1C7AD93C0095C053 /* Stop.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +38,12 @@
 		7B040DAE1C7A2F3300EF130F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7B040DB01C7A7C5E00EF130F /* TrimetAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrimetAPI.swift; sourceTree = "<group>"; };
 		7B3DC3001C7C322300C18AAD /* StopAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopAnnotation.swift; sourceTree = "<group>"; };
+		7B3DC3161C7D7C1300C18AAD /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		7B3DC3171C7D7C1300C18AAD /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		7B3DC3181C7D7C1300C18AAD /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		7B3DC3191C7D7C1300C18AAD /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		7B3DC31A1C7D7C1300C18AAD /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		7B3DC3211C7D7C6100C18AAD /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
 		7BCE09DC1C7AD93C0095C053 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		DEBFECBE5168D5535EBA00D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +100,7 @@
 		7B040D9B1C7A2F1000EF130F /* ARTransit */ = {
 			isa = PBXGroup;
 			children = (
+				7B3DC3151C7D7C1300C18AAD /* AR */,
 				7B040D9C1C7A2F1000EF130F /* AppDelegate.swift */,
 				7B040D9E1C7A2F1000EF130F /* ViewController.swift */,
 				7B040DB01C7A7C5E00EF130F /* TrimetAPI.swift */,
@@ -99,6 +112,27 @@
 				7B3DC3001C7C322300C18AAD /* StopAnnotation.swift */,
 			);
 			path = ARTransit;
+			sourceTree = "<group>";
+		};
+		7B3DC3151C7D7C1300C18AAD /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				7B3DC3201C7D7C6100C18AAD /* Debug */,
+				7B3DC3161C7D7C1300C18AAD /* ARAnnotation.swift */,
+				7B3DC3171C7D7C1300C18AAD /* ARAnnotationView.swift */,
+				7B3DC3181C7D7C1300C18AAD /* ARConfiguration.swift */,
+				7B3DC3191C7D7C1300C18AAD /* ARTrackingManager.swift */,
+				7B3DC31A1C7D7C1300C18AAD /* ARViewController.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		7B3DC3201C7D7C6100C18AAD /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				7B3DC3211C7D7C6100C18AAD /* DebugMapViewController.swift */,
+			);
+			path = Debug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,11 +263,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3DC3221C7D7C6100C18AAD /* DebugMapViewController.swift in Sources */,
 				7B040DB11C7A7C5E00EF130F /* TrimetAPI.swift in Sources */,
+				7B3DC31B1C7D7C1300C18AAD /* ARAnnotation.swift in Sources */,
 				7B040D9F1C7A2F1000EF130F /* ViewController.swift in Sources */,
+				7B3DC31E1C7D7C1300C18AAD /* ARTrackingManager.swift in Sources */,
+				7B3DC31D1C7D7C1300C18AAD /* ARConfiguration.swift in Sources */,
 				7B040D9D1C7A2F1000EF130F /* AppDelegate.swift in Sources */,
 				7BCE09DD1C7AD93C0095C053 /* Stop.swift in Sources */,
 				7B3DC3011C7C322300C18AAD /* StopAnnotation.swift in Sources */,
+				7B3DC31C1C7D7C1300C18AAD /* ARAnnotationView.swift in Sources */,
+				7B3DC31F1C7D7C1300C18AAD /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
