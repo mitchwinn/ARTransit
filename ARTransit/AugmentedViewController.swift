@@ -10,9 +10,11 @@ import UIKit
 import CoreLocation
 
 class AugmentedViewController: UIViewController, ARDataSource {
+    //MARK: - Instance variables
     var stops = [Stop]()
     var annotatedStops = [ARStopAnnotation]()
     
+    //MARK: - Override functions
     override func viewDidLoad() {
         // Check if device has hardware needed for augmented reality.
         let result = ARViewController.createCaptureSession()
@@ -39,6 +41,7 @@ class AugmentedViewController: UIViewController, ARDataSource {
         self.presentViewController(arViewController, animated: true, completion: nil)
     }
     
+    //MARK: Class Functions
     /// This method is called by ARViewController, make sure to set dataSource property.
     func ar(arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView
     {

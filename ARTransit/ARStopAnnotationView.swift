@@ -8,12 +8,12 @@
 
 import UIKit
 
-public class ARStopAnnotationView: ARAnnotationView, UIGestureRecognizerDelegate
+class ARStopAnnotationView: ARAnnotationView, UIGestureRecognizerDelegate
 {
-    public var titleLabel: UILabel?
-    public var infoButton: UIButton?
+    var titleLabel: UILabel?
+    var infoButton: UIButton?
 
-    override public func didMoveToSuperview()
+    override func didMoveToSuperview()
     {
         super.didMoveToSuperview()
         if self.titleLabel == nil
@@ -65,7 +65,7 @@ public class ARStopAnnotationView: ARAnnotationView, UIGestureRecognizerDelegate
     }
 
     // This method is called whenever distance/azimuth is set
-    override public func bindUi()
+    override func bindUi()
     {
         if let annotation = self.annotation, let title = annotation.title
         {
@@ -76,18 +76,17 @@ public class ARStopAnnotationView: ARAnnotationView, UIGestureRecognizerDelegate
         }
     }
 
-    public override func layoutSubviews()
+    override func layoutSubviews()
     {
         super.layoutSubviews()
         self.layoutUi()
     }
 
-    public func tapGesture()
+    func tapGesture()
     {
         if let annotation = self.annotation
         {
-            let alertView = UIAlertView(title: annotation.title, message: "Tapped", delegate: nil, cancelButtonTitle: "OK")
-            alertView.show()
+            print("Annotation tapped: \(annotation.title)")
         }
     }
 }

@@ -10,8 +10,15 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
+    //MARK: - Instance Variables
     var locationManager: CLLocationManager!
+    var foundStops = [Stop]()
+    
+    //MARK: Interface Builder Variables
     @IBOutlet weak var mapView: MKMapView!
+    
+    //MARK: - Override functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,7 +35,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // When transitioning to new view, prepare that new view with the proper data to send.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "btnAugmented") {
+            let svc = segue.destinationViewController as! AugmentedViewController;
+            svc.stops = self.foundStops
+        }
+    }
 
+    //MARK: - Class Functions
+    
+    /// Updates the users location based on accuracy, and creates new stop annotations.
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let lastLocation = locations.last
 
@@ -45,8 +63,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             TrimetAPI.sharedInstance.getStops(lastLocation!, radius: 300, completionBlock: {
                 (let stops) in
                 print("\(stops)")
-
-                for stop in stops {
+                // Store the stops to the instance variable.
+                self.foundStops = stops
+                
+                // Iterate through the found stops and create new annotations.
+                for stop in self.foundStops {
                     // Create a new annotation.
                     let stopAnnotation = StopAnnotation(stop: stop)
 
@@ -55,6 +76,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 }
             })
 
+            // Finally, stop updating the users location.
             manager.stopUpdatingLocation()
         }
     }
